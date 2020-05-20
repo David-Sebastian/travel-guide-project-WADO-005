@@ -1,0 +1,72 @@
+/* Head and Main */
+h5 {
+  font-weight: bolder;
+}
+
+p {
+  font-weight: lighter;
+}
+
+#checkoutbutton {
+  margin-left: 0px;
+  margin-right: 8px;
+  padding: 6px 20px 6px 20px;
+}
+
+#totalprice {
+  margin-left: 8px;
+  margin-right: 0px;
+  padding: 6px 40px 6px 40px;
+}
+
+#searchinput {
+  background-image: url("/img/search--v2.png");
+  background-position: left;
+  background-size: 1cm;
+  background-repeat: no-repeat;
+  padding: 16px 12px 16px 50px;
+}
+
+/* Carousel */
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+}
+
+.carousel-item {
+  height: 50rem;
+}
+
+/* Card */
+.blog .card-body {
+  padding: 1em;
+}
+
+.card-text {
+  height: 160px;
+}
+
+/* Form */
+.contact-form {
+  margin: 4em 0;
+  position: relative;
+}
+
+.contact-form h1 {
+  padding: 2em 1px;
+  color: rgba(0, 0, 0, 0.685);
+}
+.contact-form .right {
+  max-width: 600px;
+}
+.contact-form .right .form-control::placeholder {
+  color: #888;
+  font-size: 16px;
+}

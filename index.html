@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main/index.css">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <img src="/img/companylogo/logo_transparent2.png" width="70" height="70" class="d-inline-block align-top" alt="My Travel Company">
+      <a class="navbar-brand" href="/index.html">My Travel Company</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#home" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="home">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/main/about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="contact-form" href="#">Get in Touch</a>
+          </li>
+        </ul>
+
+        <form class="form-inline search-box">
+          <input class="form-control mr-sm-2" id="searchinput" type="search"  placeholder="Search Destination ..." aria-label="Search">
+          <input class="form-control mr-sm-4 rounded-pill" id="totalprice" type="text" placeholder="Total Price:$0" readonly>
+        </form>
+        <a href="/main/checkout/checkout.html" class="btn btn-outline-primary my-3 my-sm-0" role="button" id="checkoutbutton" aria-pressed="true">Checkout</a>
+        <div class="btn-group-toggle my-2 my-sm-0" data-toggle="buttons">
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+      <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselCaptions" data-slide-to="3"></li>
+          <li data-target="#carouselCaptions" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/london_bigben.jpg" class="d-block w-100" alt="United-Kingdom">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>United Kingdom</h5>
+              <p>London is the capital and largest city of England and the United Kingdom, and is the largest urban area in Greater London. The River Thames travels through the city.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/japan.jpeg" class="d-block w-100" alt="Japan">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Japan</h5>
+              <p>Japan is truly timeless, a place where ancient traditions are fused with modern life as if it were the most natural thing in the world.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/tanahlotbali.jpeg" class="d-block w-100" alt="Tanah Lot-Bali">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Indonesia</h5>
+              <p>Bali is the most popular island holiday destination in the Indonesian archipelago. It’s home to an ancient culture that's known for its warm hospitality as well as exotic temples and palaces set against stunning natural backdrops. Dining in Bali presents endless choices of exotic, local cuisine. After sunset, famous nightspots come to life offering exciting clubbing and packed dance floors.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/paris.jpeg" class="d-block w-100" alt="Paris">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Paris</h5>
+              <p>Paris has been one of the world’s most important and attractive cities. It is appreciated for the opportunities it offers for business and commerce, for study, for culture, and for entertainment; its gastronomy, haute couture, painting, literature, and intellectual community especially enjoy an enviable reputation.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/unitedstates.jpeg" class="d-block w-100" alt="United-States">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>United States</h5>
+              <p>America is a big country made up of a bunch of states, and therefore, it’s wise that you check the weather condition of the particular place you wish to visit before embarking on your journey.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    <title>My Travel Company</title>
+  </head>
+  
+    <br/>
+    <!-- Filter Button -->
+      <div class="container">
+        <div class="d-flex justify-content-between" style="margin-bottom: 14px;">
+          <p class="text-muted">All Places</p>
+          <select class="dropdown">
+              <option value="" selected>Select Country</option>
+          </select>
+      </div>
+    <br/>
+
+    <!-- Main Body -->
+    <body>
+    <div class="blog">
+    <div class="row">
+    <div class="card-deck">
+      <!--Card Bali-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3"> 
+        <div class="card-header"><h5>Bali Island</h5></div>
+          <div class="card-body">
+          <img src="/img/bali1.jpeg" class="img-fluid" alt="Bali Island">
+          <br><br>
+          <p class="card-text">Bali is Indonesia's main tourist destination, with a significant rise in tourism since the 1980s. Tourism-related business makes up 80% of its economy. It is renowned for its highly developed arts, including traditional and modern dance, sculpture, painting, leather, metalworking, and music.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bali">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Raja Ampat-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Raja Ampat Regency</h5></div>
+          <div class="card-body">
+          <img src="/img/rajaampat.jpeg" class="img-fluid" alt="Raja Ampat Regency">
+          <br><br>
+          <p class="card-text">Raja Ampat is located off the northwest tip of Bird's Head Peninsula on the island of New Guinea, in Indonesia's West Papua province, Raja Ampat, or the Four Kings, is an archipelago comprising over 1,500 small islands, cays, and shoals surrounding the four main islands of Misool.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rajaampat">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Yogyakarta-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Yogyakarta City</h5></div>
+          <div class="card-body">
+          <img src="/img/yogyakarta.jpeg" class="img-fluid" alt="Yogyakarta City">
+          <br><br>
+          <p class="card-text">Yogyakarta is the artistic and cultural heart of the island of Java – the rich Javanese heritage shines forth wherever you look. One of the oldest cities in Indonesia, there are lots of historical sites to visit; it is still ruled by a sultan.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yogyakarta">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Tokyo-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Tokyo City</h5></div>
+          <div class="card-body">
+          <img src="/img/tokyo.jpeg" class="img-fluid" alt="London City">
+          <br><br>
+          <p class="card-text">Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tokyo">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Sapporo-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Sapporo City</h5></div>
+          <div class="card-body">
+          <img src="/img/sapporo.jpeg" class="img-fluid" alt="Sapporo City">
+          <br><br>
+          <p class="card-text">Sapporo, in Hokkaido Prefecture, is Japan’s northernmost major city. The chilly climate makes it the ideal destination for people who enjoy the winter season. The city is the site of the famous Sapporo Snow Festival, an event held each February.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sapporo">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Kyoto-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Kyoto City</h5></div>
+          <div class="card-body">
+          <img src="/img/kyoto.jpeg" class="img-fluid" alt="Kyoto City">
+          <br><br>
+          <p class="card-text">Kyoto was the official capital of Japan for over 1,000 years and remains one of the foremost destinations to experience traditional Japanese culture. The city has around 2,000 temples and shrines, including the “Golden Pavilion,” Kinkakuji, Ryoanji known for its zen rock garden.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $15,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kyoto">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Paris-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Paris</h5></div>
+          <div class="card-body">
+          <img src="/img/paris1.jpeg" class="img-fluid" alt="Paris ">
+          <br><br>
+          <p class="card-text">Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $20,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#paris">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Seattle-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Seattle City</h5></div>
+          <div class="card-body">
+          <img src="/img/seattle.jpeg" class="img-fluid" alt="Seattle City">
+          <br><br>
+          <p class="card-text">Seattle, a city on Puget Sound in the Pacific Northwest, is surrounded by water, mountains and evergreen forests, and contains thousands of acres of parkland. Washington State’s largest city, it’s home to a large tech industry.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $20,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seattle">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card New York-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>New York City</h5></div>
+          <div class="card-body">
+          <img src="/img/newyork2.jpeg" class="img-fluid" alt="New York City">
+          <br><br>
+          <p class="card-text">New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $20,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newyork">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card London-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>London</h5></div>
+          <div class="card-body">
+          <img src="/img/london3.jpeg" class="img-fluid" alt="London City">
+          <br><br>
+          <p class="card-text">London is the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $30,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#london">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary"  href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Edinburgh-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+      <div class="card-header"><h5>Edinburgh</h5></div>
+          <div class="card-body">
+          <img src="/img/edinburgh.jpeg" class="img-fluid" alt="Edinburgh City">
+          <br><br>
+          <p class="card-text">Edinburgh combines the young and modern sensibilities of a great university city and national capital with a historic and dramatic setting. Here you'll find the world's biggest performing arts festival, a 1,000 year old castle and a mountain - Arthur's Seat - right in the middle of town.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $30,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edinburgh">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Manchester-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Manchester</h5></div>
+          <div class="card-body">
+          <img src="/img/manchester1.jpeg" class="img-fluid" alt="Edinburgh City">
+          <br><br>
+          <p class="card-text">Manchester is often called the first modern city. In the 18th century this Northwestern city, 30 miles from Liverpool, was the cotton making capital of the world and one of the breeding grounds of the industrial revolution.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $30,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#manchester">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+        </div>
+      </div>
+    </div>
+  
+      <!--Card Liverpool-->
+      <div class="col-md-4 col-lg-4 col-sm-12">
+      <div class="card bg-light mb-3">
+        <div class="card-header"><h5>Liverpool</h5></div>
+          <div class="card-body">
+          <img src="/img/liverpool.jpeg" class="img-fluid" alt="Liverpool City">
+          <br><br>
+          <p class="card-text">When visitors think of Liverpool, the Beatles come immediately to mind. And, of course, there's plenty to do that's Beatles related - not least of which is is visit to the famous Cavern Club. In 2008, the mantle of European Capital of Culture landed on Liverpool.</p>
+          <hr>
+          <h5 class="card-title">Total Expenses : $30,000</h5>
+          <hr>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#liverpool">
+            View details &raquo;
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Add to Wishlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      <br>
+  
+      <!-- Modal London -->
+      <div class="modal fade popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade bd-example-modal-lg" id="london" tabindex="-1" role="dialog" aria-labelledby="londonlabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="londonlabel">London City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/london3.jpeg" class="img-fluid" alt="London City">
+            <div class="modal-body">
+            &emsp;London is the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $30,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Tokyo -->
+      <div class="modal fade bd-example-modal-lg" id="tokyo" tabindex="-1" role="dialog" aria-labelledby="tokyolabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="tokyolabel">Tokyo City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/tokyo.jpeg" class="img-fluid" alt="Tokyo City">
+            <div class="modal-body">
+            &emsp;Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      <!-- Modal Bali -->
+      <div class="modal fade bd-example-modal-lg" id="bali" tabindex="-1" role="dialog" aria-labelledby="balilabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="balilabel">Bali Island</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/bali1.jpeg" class="img-fluid" alt="Bali City">
+            <div class="modal-body">
+            &emsp;Bali is Indonesia's main tourist destination, with a significant rise in tourism since the 1980s. Tourism-related business makes up 80% of its economy. It is renowned for its highly developed arts, including traditional and modern dance, sculpture, painting, leather, metalworking, and music. The Indonesian International Film Festival is held every year in Bali. Other international events held in Bali include the Miss World 2013 and 2018 Annual Meetings of the International Monetary Fund and the World Bank Group. In March 2017, TripAdvisor named Bali as the world's top destination in its Traveller's Choice award.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Raja Ampat -->
+      <div class="modal fade bd-example-modal-lg" id="rajaampat" tabindex="-1" role="dialog" aria-labelledby="rajaampatlabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="rajaampatlabel">Raja Ampat Regency</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/rajaampat.jpeg" class="img-fluid" alt="Raja Ampat Regency">
+            <div class="modal-body">
+            &emsp;Raja Ampat is located off the northwest tip of Bird's Head Peninsula on the island of New Guinea, in Indonesia's West Papua province, Raja Ampat, or the Four Kings, is an archipelago comprising over 1,500 small islands, cays, and shoals surrounding the four main islands of Misool, Salawati, Batanta, and Waigeo, and the smaller island of Kofiau. The Raja Ampat archipelago straddles the Equator and forms part of Coral Triangle which contains the richest marine biodiversity on earth.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Yogyakarta -->
+      <div class="modal fade bd-example-modal-lg" id="yogyakarta" tabindex="-1" role="dialog" aria-labelledby="yogyakartalabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="yogyakartalabel">Yogyakarta City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/yogyakarta.jpeg" class="img-fluid" alt="Yogyakarta City">
+            <div class="modal-body">
+            &emsp;Yogyakarta is the artistic and cultural heart of the island of Java – the rich Javanese heritage shines forth wherever you look. One of the oldest cities in Indonesia, there are lots of historical sites to visit; it is still ruled by a sultan, whose elegant, walled palace dominates the center of town. A great place to live, Yogyakarta’s delightful street art, fantastic art galleries and museums, as well as its sumptuous dining options, make it lovely to visit. There is always something interesting to see or do. Although the local culture and traditions are still very present, fast-food joints and shopping malls have sprung up around the city. With the spectacular temple complex at Borobudur and Prambanan nearby, Yogyakarta is a great base from which you can explore the surrounding region.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Sapporo -->
+      <div class="modal fade bd-example-modal-lg" id="sapporo" tabindex="-1" role="dialog" aria-labelledby="sapporolabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="sapporolabel">Sapporo City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/sapporo.jpeg" class="img-fluid" alt="Sapporo City">
+            <div class="modal-body">
+            &emsp;Sapporo, in Hokkaido Prefecture, is Japan’s northernmost major city. The chilly climate makes it the ideal destination for people who enjoy the winter season. The city is the site of the famous Sapporo Snow Festival, an event held each February showcasing an array of marvelous ice and snow sculptures that is visited by about 2 million people each year! Athletic types can visit the Sapporo Winter Sports Museum, which showcases the legacy of the 1972 Winter Olympics, or they can hit the slopes, skiing or snowboarding in one of the city’s nearby ski resorts. And of course, not to be missed is Sapporo’s delectable seafood cuisine, revered throughout Japan!
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Kyoto -->
+      <div class="modal fade bd-example-modal-lg" id="kyoto" tabindex="-1" role="dialog" aria-labelledby="kyotolabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="kyotolabel">Kyoto City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/kyoto.jpeg" class="img-fluid" alt="Kyoto City">
+            <div class="modal-body">
+            &emsp;Kyoto was the official capital of Japan for over 1,000 years and remains one of the foremost destinations to experience traditional Japanese culture. The city has around 2,000 temples and shrines, including the “Golden Pavilion,” Kinkakuji, Ryoanji known for its zen rock garden, and Fushimi Inari Taisha, the shrine with a tunnel of 5,000 vermillion torii gates. One of the most talked-about areas of Kyoto is the “geisha district” of Gion. While geiko (the Kyoto term for geisha) and maiko (apprentice geiko) are known for being elusive, if you are lucky, you just may encounter one of the kimono-adorned beauties taking a stroll! Art and history lovers will also not want to miss the Kyoto National Museum, which houses over 230 designated National Treasures and Important Cultural Properties.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $15,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Paris -->
+      <div class="modal fade bd-example-modal-lg" id="paris" tabindex="-1" role="dialog" aria-labelledby="parislabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="parislabel">Paris City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/paris1.jpeg" class="img-fluid" alt="Paris City">
+            <div class="modal-body">
+            &emsp;Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $20,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Seattle -->
+      <div class="modal fade bd-example-modal-lg" id="seattle" tabindex="-1" role="dialog" aria-labelledby="seattlelabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="seattlelabel">Seattle City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/seattle.jpeg" class="img-fluid" alt="Seattle City">
+            <div class="modal-body">
+            &emsp;Seattle, a city on Puget Sound in the Pacific Northwest, is surrounded by water, mountains and evergreen forests, and contains thousands of acres of parkland. Washington State’s largest city, it’s home to a large tech industry, with Microsoft and Amazon headquartered in its metropolitan area. The futuristic Space Needle, a 1962 World’s Fair legacy, is its most iconic landmark.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $20,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal New York -->
+      <div class="modal fade bd-example-modal-lg" id="newyork" tabindex="-1" role="dialog" aria-labelledby="newyorklabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="newyorklabel">New York City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/newyork2.jpeg" class="img-fluid" alt="New York City">
+            <div class="modal-body">
+            &emsp;New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $20,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Edinburgh -->
+      <div class="modal fade bd-example-modal-lg" id="edinburgh" tabindex="-1" role="dialog" aria-labelledby="edinburghlabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="edinburghlabel">Edinburgh City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/edinburgh.jpeg" class="img-fluid" alt="Edinburgh City">
+            <div class="modal-body">
+            &emsp;Edinburgh combines the young and modern sensibilities of a great university city and national capital with a historic and dramatic setting. Here you'll find the world's biggest performing arts festival, a 1,000 year old castle and a mountain - Arthur's Seat - right in the middle of town. And, Edinburgh's annual New Year's celebration - Hogmanay - is four-day street party to end all street parties. Edinburgh has about half a million people people, including more than 62,000 university students. At least 13 million people visit every year. During the main festival month of August, the population of Edinburgh swells by more than one million, making it, temporarily, the UK's second largest city.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $30,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Manchester -->
+      <div class="modal fade bd-example-modal-lg" id="manchester" tabindex="-1" role="dialog" aria-labelledby="manchesterlabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="manchesterlabel">Manchester City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/manchester1.jpeg" class="img-fluid" alt="Manchester City">
+            <div class="modal-body">
+            &emsp;Manchester is often called the first modern city. In the 18th century this Northwestern city, 30 miles from Liverpool, was the cotton making capital of the world and one of the breeding grounds of the industrial revolution. Its entrepreneurs and industrial tycoons endowed it with museums, galleries, theatres and libraries as well as outstanding civic architecture. A devastating IRA bomb in 1996 created the need for city center regeneration resulting in a new, dramatic 21st century cityscape.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $30,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      <!-- Modal Liverpool -->
+      <div class="modal fade bd-example-modal-lg" id="liverpool" tabindex="-1" role="dialog" aria-labelledby="liverpoollabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="liverpoollabel">Liverpool City</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="/img/liverpool.jpeg" class="img-fluid" alt="Liverpool City">
+            <div class="modal-body">
+            &emsp;When visitors think of Liverpool, the Beatles come immediately to mind. And, of course, there's plenty to do that's Beatles related - not least of which is is visit to the famous Cavern Club. In 2008, the mantle of European Capital of Culture landed on Liverpool, revitalizing this city in England's northwest, as the award often does. Liverpool's Albert Docks area became a UNESCO World Heritage Site for its role in the maritime history of Britain's. Visitors to the area can explore Liverpool's part in the history of the slave trade, commemorated in the world's only International Slavery Museum, in emigration to the New World and in the spread of trade and culture across the British Empire. The spotlight on the dock's history has also brought trendy clubs, hotels, shopping, dining and a Liverpool branch of the famous Tate Gallery to the immediate surrounding area.
+            </div>
+            <div class="modal-footer">
+              <h5 class="card-title">Total Expenses : $30,000</h5>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="button" class="btn btn-primary" data-dismiss="alert" >Add to Wishlist</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <hr>
+
+    <div class="contact-form" id="contact-form">
+      <div class="container">
+        <form>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <h1>Get in Touch</h1> 
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-12 right">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="John Doe" name="">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control form-control-lg" placeholder="JohnDoe@email.com" name="email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control form-control-lg" id="form-text"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Send" name="submit">
+          </div>
+        </div>
+        </form>
+      </div>
+      </div>
+    
+<!-- Footer -->
+<footer class="container">
+  <p>&copy; My Travel Company 2020</p>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery, Popper.js, dan Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src='/main/main.js'></script>
+
+</body>
+</html>
